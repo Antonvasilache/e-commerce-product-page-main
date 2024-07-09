@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+    <script type="module" src="script.js"></script>
+  </head>
+  <body class="body">
+    <div class="overlay hidden"></div>
+    <div class="container">
+      <header class="header">
+        <div class="nav-container">
+          <div class="border-bottom">
+            <img src="/images/logo.svg" alt="Sneakers logo" />
+          </div>
+          <nav class="nav">
+            <ul class="nav-list">
+              <li class="nav-list-item border-bottom">Collections</li>
+              <li class="nav-list-item border-bottom">Men</li>
+              <li class="nav-list-item border-bottom">Women</li>
+              <li class="nav-list-item border-bottom">About</li>
+              <li class="nav-list-item border-bottom">Contact</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="cart-avatar-container">
+          <div class="cart-container">
+            <div class="cart-items-number hidden">3</div>
+            <svg
+              width="22"
+              height="20"
+              xmlns="http://www.w3.org/2000/svg"
+              class="cart-icon"
+            >
+              <path
+                d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                fill="#69707D"
+                fill-rule="nonzero"
+              />
+            </svg>
+          </div>
+          <div class="avatar-img-container">
+            <img
+              src="/images/image-avatar.png"
+              alt="Avatar photo"
+              class="avatar-img"
+            />
+          </div>
+        </div>
+      </header>
+      <div class="cart hidden">
+        <div class="cart-title">Cart</div>
+        <div class="cart-content-empty">Your cart is empty</div>
+        <div class="cart-content-filled hidden">
+          <button class="checkout-btn">Checkout</button>
+        </div>
+      </div>
+      <main class="main">
+        <aside class="aside">
+          <div class="product-img-container">
+            <img
+              src="/images/image-product-1.jpg"
+              alt="Product image 1"
+              class="product-img"
+            />
+            <svg
+              width="56"
+              height="56"
+              viewBox="0 0 56 56"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="arrow-left"
+            >
+              <circle cx="28" cy="28" r="28" fill="white" />
+              <path d="M32 20L24 28L32 36" stroke="#1D2026" stroke-width="3" />
+            </svg>
+            <svg
+              width="56"
+              height="56"
+              viewBox="0 0 56 56"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="arrow-right"
+            >
+              <circle cx="28" cy="28" r="28" fill="white" />
+              <path d="M24 20L32 28L24 36" stroke="#1D2026" stroke-width="3" />
+            </svg>
+          </div>
+          <ul class="product-thumbnails">
+            <li class="product-thumbnails-item" data-thumbnail-id="1">
+              <img
+                src="/images/image-product-1-thumbnail.jpg"
+                alt="Product thumbnail 1"
+                class="product-thumbnails-img"
+              />
+              <div class="product-thumbnails-overlay"></div>
+            </li>
+            <li class="product-thumbnails-item" data-thumbnail-id="2">
+              <img
+                src="/images/image-product-2-thumbnail.jpg"
+                alt="Product thumbnail 2"
+                class="product-thumbnails-img"
+              />
+              <div class="product-thumbnails-overlay"></div>
+            </li>
+            <li class="product-thumbnails-item" data-thumbnail-id="3">
+              <img
+                src="/images/image-product-3-thumbnail.jpg"
+                alt="Product thumbnail 3"
+                class="product-thumbnails-img"
+              />
+              <div class="product-thumbnails-overlay"></div>
+            </li>
+            <li class="product-thumbnails-item" data-thumbnail-id="4">
+              <img
+                src="/images/image-product-4-thumbnail.jpg"
+                alt="Product thumbnail 4"
+                class="product-thumbnails-img"
+              />
+              <div class="product-thumbnails-overlay"></div>
+            </li>
+          </ul>
+        </aside>
+        <article class="article">
+          <p class="article-subheader">Sneaker Company</p>
+          <h2 class="article-header">Fall Limited Edition Sneakers</h2>
+          <p class="article-description">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="article-price">
+            <div class="article-price-discount">
+              <span class="article-price-discount-number">$125.00</span>
+              <div class="article-price-discount-container">
+                <span>50%</span>
+              </div>
+            </div>
+            <span class="article-price-full">$250.00</span>
+          </div>
+          <div class="article-add-qty">
+            <div class="article-qty">
+              <div class="article-qty-minus">
+                <svg
+                  width="12"
+                  height="4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <defs>
+                    <path
+                      d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z"
+                      id="a"
+                    />
+                  </defs>
+                  <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a" />
+                </svg>
+              </div>
+              <span class="article-qty-number">0</span>
+              <div class="article-qty-plus">
+                <svg
+                  width="12"
+                  height="12"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <defs>
+                    <path
+                      d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z"
+                      id="b"
+                    />
+                  </defs>
+                  <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#b" />
+                </svg>
+              </div>
+            </div>
+            <button class="add-cart-btn">
+              <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                  fill="#1D2026"
+                  fill-rule="nonzero"
+                />
+              </svg>
+              <span>Add to cart</span>
+            </button>
+          </div>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>
