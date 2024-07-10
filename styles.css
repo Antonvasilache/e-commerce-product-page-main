@@ -269,7 +269,7 @@
 
 .aside {
   display: grid;
-  justify-items: end;
+  justify-items: center;
   gap: 32px;
 }
 
