@@ -308,6 +308,10 @@
   stroke: var(--Orange);
 }
 
+.close-icon {
+  justify-self: end;
+}
+
 .close-icon path:active,
 .close-icon path:hover {
   cursor: pointer;
