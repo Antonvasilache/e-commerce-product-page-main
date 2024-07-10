@@ -23,9 +23,37 @@
   </head>
   <body class="body">
     <div class="overlay hidden"></div>
+    <div class="mobile-menu hidden">
+      <div class="mobile-menu-sub">
+        <img
+          src="/images/icon-close.svg"
+          class="menu-img-close"
+          alt="Menu close icon"
+        />
+        <ul class="mobile-menu-list">
+          <li class="mobile-menu-item">Collections</li>
+          <li class="mobile-menu-item">Men</li>
+          <li class="mobile-menu-item">Women</li>
+          <li class="mobile-menu-item">About</li>
+          <li class="mobile-menu-item">Contact</li>
+        </ul>
+      </div>
+    </div>
     <div class="container">
       <header class="header">
         <div class="nav-container">
+          <svg
+            width="16"
+            height="15"
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon-menu"
+          >
+            <path
+              d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z"
+              fill="#69707D"
+              fill-rule="evenodd"
+            />
+          </svg>
           <div class="border-bottom">
             <img src="/images/logo.svg" alt="Sneakers logo" />
           </div>
@@ -73,6 +101,23 @@
       </div>
       <main class="main">
         <aside class="aside">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="close-icon hidden"
+          >
+            <path
+              id="Combined Shape"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M20 2.85714L17.1429 0L10 7.14286L2.85714 0L0 2.85714L7.14286 10L0 17.1429L2.85714 20L10 12.8571L17.1429 20L20 17.1429L12.8571 10L20 2.85714Z"
+              fill="white"
+            />
+          </svg>
+
           <div class="product-img-container">
             <img
               src="/images/image-product-1.jpg"
@@ -85,7 +130,7 @@
               viewBox="0 0 56 56"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              class="arrow-left"
+              class="arrow-left hidden"
             >
               <circle cx="28" cy="28" r="28" fill="white" />
               <path d="M32 20L24 28L32 36" stroke="#1D2026" stroke-width="3" />
@@ -96,7 +141,7 @@
               viewBox="0 0 56 56"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              class="arrow-right"
+              class="arrow-right hidden"
             >
               <circle cx="28" cy="28" r="28" fill="white" />
               <path d="M24 20L32 28L24 36" stroke="#1D2026" stroke-width="3" />

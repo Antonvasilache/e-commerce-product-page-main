@@ -139,29 +139,41 @@ export function thumbnailSelect(e) {
   productImg.src = `/images/image-product-${thumbnailId}.jpg`;
 }
 
-export function navigateThumbnails(e) {
-  const overlay = document.querySelector(".overlay");
-  //   const arrowLeft = overlay.querySelector(".arrow-left");
-  //   const arrowRight = overlay.querySelector(".arrow-right");
-  const productImg = overlay.querySelector(".product-img");
+export function navigateThumbnails(e, container) {
+  const productImg = container.querySelector(".product-img");
   const arrowLeft = e.target.closest(".arrow-left");
-  console.log(arrowLeft);
+  const arrowRight = e.target.closest(".arrow-right");
 
-  const currentThumbnail = overlay.querySelector(
+  const currentThumbnail = container.querySelector(
+    ".product-thumbnails-overlay.active"
+  );
+
+  const currentThumbnailParent = container.querySelector(
     ".product-thumbnails-overlay.active"
   )?.parentElement;
 
-  let thumbnailId = currentThumbnail ? currentThumbnail.dataset.thumbnailId : 1;
+  let thumbnailId = currentThumbnailParent
+    ? currentThumbnailParent.dataset.thumbnailId
+    : 1;
 
-  if (thumbnailId > 1) {
-    thumbnailId = thumbnailId - 1;
-    productImg.src = `/images/image-product-${thumbnailId}.jpg`;
-    console.log(productImg);
+  if (thumbnailId > 1 && e.currentTarget === arrowLeft) {
+    thumbnailId = Number(thumbnailId) - 1;
   }
 
-  console.log(thumbnailId);
+  if (thumbnailId < 4 && e.currentTarget === arrowRight) {
+    thumbnailId = Number(thumbnailId) + 1;
+  }
 
-  //!!NEED TO CHANGE ACTIVE THUMBNAIL
+  currentThumbnail?.classList.remove("active");
+  const previousParent = container.querySelector(
+    `.product-thumbnails-item[data-thumbnail-id="${thumbnailId}"]`
+  );
+  const previousThumbnail = previousParent.querySelector(
+    ".product-thumbnails-overlay"
+  );
+  previousThumbnail.classList.add("active");
+
+  productImg.src = `/images/image-product-${thumbnailId}.jpg`;
 }
 
 export function lightboxDisplay() {
